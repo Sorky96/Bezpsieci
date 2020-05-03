@@ -21,24 +21,19 @@ namespace DecryptorEcryptor
                 {
                     var line = sr.ReadToEnd();
                     Console.WriteLine($"Zawartość pliku to: {line} \n   Chcesz plik 1. Zaszyfrowac? 2. Odszyfrowac?");
-                    if (Console.ReadKey().Key == ConsoleKey.D1)
-                    {
-                        tmpText = Encrypt(line);                       
+                    sr.Close();
+                    var enteredCharacter = Console.ReadKey().Key;
+                    if (enteredCharacter == ConsoleKey.D1)
+                    {  
+                        SaveFile(Encrypt(line), fileName);
+                        tmpText = Encrypt(line);
                     }
-                    if (Console.ReadKey().Key == ConsoleKey.D2)
+                    else if (enteredCharacter == ConsoleKey.D2)
                     {
-                        tmpText = Decrypt(line);                        
+                        SaveFile(Decrypt(line), fileName);
+                        tmpText = Decrypt(line);
                     }
-                    Console.WriteLine($"Operacja się powiodła. Tekst znajdujacy sie w pliku to: {tmpText}");
-                    Console.ReadLine();
-                }
-                using (var fs = new FileStream(fileName, FileMode.Truncate))
-                {
-                }
-
-                using (StreamWriter sw = new StreamWriter(fileName))
-                {
-                    sw.Write(tmpText);
+                    Console.WriteLine($"Operacja się powiodła. Tekst znajdujacy sie w pliku to: {tmpText}");                    
                 }
             }
 
@@ -50,6 +45,16 @@ namespace DecryptorEcryptor
             Console.ReadKey();
         }
 
+        public static void SaveFile(string tmpText, string fileName)
+        {
+            using (var fs = new FileStream(fileName, FileMode.Truncate))
+            {
+            }
+            using (StreamWriter sw = new StreamWriter(fileName))
+            {
+                sw.Write(tmpText);
+            }
+        }
         public static string Encrypt(string line)
         {
             string EncryptionKey = "abc123";
