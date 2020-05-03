@@ -1,0 +1,6 @@
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\bin\Debug\DecryptorEcryptor.exe.config
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\bin\Debug\DecryptorEcryptor.exe
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\bin\Debug\DecryptorEcryptor.pdb
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\obj\Debug\DecryptorEcryptor.csprojAssemblyReference.cache
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\obj\Debug\DecryptorEcryptor.exe
+C:\Users\ziemn\source\repos\DecryptorEcryptor\DecryptorEcryptor\obj\Debug\DecryptorEcryptor.pdb
